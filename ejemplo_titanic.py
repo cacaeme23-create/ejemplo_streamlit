@@ -25,7 +25,7 @@ with st.sidebar:
 
 # Desplegamos un histograma con los datos del eje X
 fig, ax = plt.subplots(1, 2, figsize=(10, 3))
-ax[0].hist(df["Age"], bins=div)
+ax[0].hist(df["Age"], bins=div, colors="green" )
 ax[0].set_xlabel("Edad")
 ax[0].set_ylabel("Frecuencia")
 ax[0].set_title("Distribucion de edades")
@@ -38,14 +38,14 @@ cant_male = len(df_male)
 df_female = df[df["Sex"] == "female"]
 cant_female = len(df_female)
 
-ax[1].bar(["Masculino", "Femenino"], [cant_male, cant_female], color = "red")
+ax[1].bar(["Masculino", "Femenino"], [cant_male, cant_female], color=["brown","yellow"])
 ax[1].set_xlabel("Sexo")
 ax[1].set_ylabel("Cantidad")
 ax[1].set_title('Distribución de hombres y mujeres')
 
 # Desplegamos el gráfico
 st.pyplot(fig)
-st.write("## personas que sobrevientes")
+st.write("## personas que sobrevivieron")
 
 # Agrupar por sexo y sobrevivencia (Survived = 1)
 survivors = df[df["Survived"] == 1].groupby("Sex").size()
