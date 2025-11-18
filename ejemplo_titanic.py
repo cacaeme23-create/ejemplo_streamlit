@@ -38,7 +38,7 @@ cant_male = len(df_male)
 df_female = df[df["Sex"] == "female"]
 cant_female = len(df_female)
 
-ax[1].bar(["Masculino", "Femenino"], [cant_male, cant_female], color=["brown","yellow"])
+ax[1].bar(["Masculino", "Femenino"], [cant_male, cant_female], color=["brown","yellow"]
 ax[1].set_xlabel("Sexo")
 ax[1].set_ylabel("Cantidad")
 ax[1].set_title('Distribución de hombres y mujeres')
