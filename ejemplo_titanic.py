@@ -7,8 +7,8 @@ df = pd.read_csv("database_titanic.csv")
 
 # Muestra un título y una descripción en la aplicación Streamlit.
 st.write("""
-# Mi
-## Gráficos usando la base de datos del Titanic
+# Mi primera app 
+## Graficos generados con la info del titanic
 """)
 
 # Usando la notación "with" para crear una barra lateral en la aplicación Streamlit.
@@ -28,7 +28,7 @@ fig, ax = plt.subplots(1, 2, figsize=(10, 3))
 ax[0].hist(df["Age"], bins=div)
 ax[0].set_xlabel("Edad")
 ax[0].set_ylabel("Frecuencia")
-ax[0].set_title("Histograma de edades")
+ax[0].set_title("Distribucion de edades")
 
 # Tomando datos para hombres y contando la cantidad
 df_male = df[df["Sex"] == "male"]
