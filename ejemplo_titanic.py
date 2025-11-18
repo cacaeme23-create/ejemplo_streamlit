@@ -45,7 +45,7 @@ ax[1].set_title('Distribución de hombres y mujeres')
 
 # Desplegamos el gráfico
 st.pyplot(fig)
-st.write("## Sobrevivientes")
+st.write("## personas que sobrevientes")
 
 # Agrupar por sexo y sobrevivencia (Survived = 1)
 survivors = df[df["Survived"] == 1].groupby("Sex").size()
