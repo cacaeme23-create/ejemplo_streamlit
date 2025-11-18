@@ -55,7 +55,7 @@ values = [survivors.get("male", 0), survivors.get("female", 0)]
 
 # Crear figura
 fig2, ax2 = plt.subplots(figsize=(5, 3))
-ax2.bar(labels, values)
+ax2.bar(labels, values, color=["yellow", "red"])
 ax2.set_xlabel("Sexo ")
 ax2.set_ylabel("Cantidad de sobrevivientes")
 ax2.set_title("Sobrevivientes separados por sexo")
